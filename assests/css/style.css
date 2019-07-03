@@ -1,0 +1,32 @@
+.jumbotron{ 
+background-color: rgba(136, 54, 122, 0.774);
+color:white;
+}
+body{
+    background:url("../images/background.jpeg");
+    color:white;
+    text-emphasis: center;
+    
+}
+#info{
+    background: red;
+}
+#game4{
+    color: thistle;
+}
+#leftDiv {
+    float: left;
+    border: 60px;
+    width: 30px;
+    height: 40px;
+}
+#rightDiv{
+float: right;
+border: 60px;
+    width: 30px;
+    height: 40px;
+}
+}
+.clear {
+    clear: both;
+}
