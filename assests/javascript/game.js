@@ -1,53 +1,86 @@
+$(document).ready(function(){
 
 // adding value to the crystal
-var image1= Math.floor(math.random()*12)+1;
-var image2= Math.floor(math.random()*12)+1;
-var image3=Math.floor(mathe.randon()*12)+1;
-var image4= Math.floor(math.random()*12)+1;
+var crystal = Math.floor(Math.random()*12)+1;
+console.log('this is a value crystal ' + crystal);
+$('#image1black').text(crystal);
+
+var greencrystal = Math.floor(Math.random()*12)+1;
+console.log('this is a value greencrystal' + greencrystal);
+$('#imagegreen').text(greencrystal);
+
+var redcrystal = Math.floor(Math.random()*12)+1;
+console.log('this is a value redcrysta ' + redcrystal);
+$('#imagered').text(redcrystal);
+
+var image6 = Math.floor(Math.random()*12)+1;
+console.log('this is a value image6 ' + image6);
+$('#image4').text(image6);
+
+var randomNumber = Math.floor(Math.random()*102)+19;
+console.log('this is a value randomNumber ' + randomNumber);
+$('#leftDiv').text(randomNumber);
+
+var presentScore = 0
+$('#presentScore').text(presentScore);
+
 //click on the randomNumber to get the win or lose
-var computer= math.floor (math.random()*120)+19;
-var presentScore=0
-var wincount=0
-var losecount=0
-// console.log the images into string
-console.log(image1, image2, image3, image4);
-var compScore = computer;
-console.log(computer)
-console.log(computerScore);
-// link the score in the html file
-$("#compScore").html(compScore);
 
-$("#presentScore").html(presentScore);
+var wincount = 0 
+var losecount = 0
 
-$("#winCount").html(wincount);
 
-$("#loseCount").html(losecount);
+$("#crystal").click(function () {
+    // alert(presentScore += crystal);
+    presentScore += crystal
+    $('#presentScore').text(presentScore);
+    if (randomNumber < presentScore){
+    $("#number1").text(losecount + 1);
+    }
+    else if (randomNumber == presentScore){
+    $("#number").text(wincount + 1);
+    
+    }
+});
+$("#greencrystal").click(function() {
+    presentScore += greencrystal
+    $('#presentScore').text(presentScore);
+    if (randomNumber < presentScore){
+    $("#number1").text(losecount + 1);
+    
+    }
+    else if (randomNumber == presentScore){
+    $("#number").text(wincount + 1);
 
-$("#image1").click(function () {
-    presentScore += images1
-    winchecker();
-    console.log(presentScore);
-    $("#presentScore").html(currentScore);
+    }
+
+})
+
+$("#redcrystal").click(function () {
+    presentScore += redcrystal
+    $('#presentScore').text(presentScore);
+    if (randomNumber < presentScore){
+    $("#number1").text(losecount + 1);
+    }
+    else if (randomNumber == presentScore){
+    $("#number").text(wincount + 1);
+    }
+})
+
+$("#image6").click(function () {
+    presentScore += image6
+    $('#presentScore').text(presentScore);
+    if (randomNumber < presentScore){
+    $("#number1").text(losecount + 1);
+    }
+    else if (randomNumber == presentScore){
+    $("#number").text(wincount + 1);
+    
+    }
+  
+})
+
+
+
 
 });
-$("#image2").click(function() {
-    presentScore += image2
-    winchecker();
-    console.log(presentScore);
-    $("#presentScore").html(presentScore);
-})
-
-$("#image3").click(function () {
-    presentScore += image3
-    winchecker();
-    Console.log(presentScore);
-    $("#presentScore").html(presentScore);
-})
-
-$("#image4").click(function () {
-    presentScore += image4
-    winchecker();
-    console.log(presentScore);
-    $("#presentScore").html(presentScore);
-
-})

@@ -6,8 +6,19 @@ body{
     background:url("../images/background.jpeg");
     color:white;
     text-emphasis: center;
-    
+    .crystal {
+       /* display: flex;
+        justify-content:space-around;
+        aligin-items:center; */
+    } 
+        .crystal {
+        border: 2px solid red;
+        width: 200px;
+        height: 200px;
+
+    }
 }
+
 #info{
     background: red;
 }
@@ -17,16 +28,25 @@ body{
 #leftDiv {
     float: left;
     border: 60px;
-    width: 30px;
-    height: 40px;
+    width: 30%;
+    height: 150px;
+    padding-inline-start: 40px
+    paddding */
+
 }
-#rightDiv{
-float: right;
+ #rightDiv{
 border: 60px;
-    width: 30px;
-    height: 40px;
+    width: 68%;
+    height: 150px;
+    text-align: right; 
+
 }
 }
 .clear {
     clear: both;
+
 }
+/* .crystal{
+    width: 100px;
+    height: 100px;
+} */
